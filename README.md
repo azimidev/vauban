@@ -1,4 +1,4 @@
-# Rotate
+# Vauban
 
 ## Project setup
 

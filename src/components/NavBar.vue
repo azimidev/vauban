@@ -1,7 +1,12 @@
 <template>
-  <nav class="navbar is-bold" role="navigation" aria-label="main navigation">
+  <nav
+    class="navbar is-black is-bold"
+    role="navigation"
+    aria-label="main navigation"
+  >
     <div class="navbar-brand is-flex container">
       <router-link class="navbar-item" to="/">Home</router-link>
+      <router-link class="navbar-item" to="/">Your List</router-link>
     </div>
   </nav>
 </template>
@@ -10,11 +15,7 @@
 import { Component, Vue } from "vue-property-decorator";
 
 @Component
-export default class NavBar extends Vue {
-  // private toggleCart(): Promise<boolean> {
-  //   return this.$store.dispatch("toggleCart", !this.$store.state.toggleCart);
-  // }
-}
+export default class NavBar extends Vue {}
 </script>
 
 <style lang="scss" scoped>
