@@ -24,11 +24,17 @@ export default new Vuex.Store({
       state.list.push(character);
       state.listCount = state.listCount + 1;
     },
+
     [types.REMOVE_FROM_LIST](state, character) {
-      // NOTE: I'm comparing the whole object because there is no identifier
       const index = state.list.map(item => item.name).indexOf(character.name);
       state.list.splice(index, 1);
       state.listCount = state.listCount - 1;
+    },
+
+    [types.SEARCH](state, query) {
+      state.characters = characters.filter((character: CharacterModel) => {
+        return character.name.toLowerCase().includes(query);
+      });
     }
   },
 
@@ -39,6 +45,10 @@ export default new Vuex.Store({
 
     removeFromList({ commit }, character) {
       commit(types.REMOVE_FROM_LIST, character);
+    },
+
+    search({ commit }, query) {
+      commit(types.SEARCH, query);
     }
   },
 
