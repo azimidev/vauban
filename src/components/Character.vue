@@ -68,14 +68,14 @@ import Capitilize from "@/mixins/Capitilize";
 export default class Character extends Mixins(Capitilize) {
   @Prop({ required: true }) character!: CharacterModel;
 
-  exists = this.$store.getters.list.includes(this.character);
+  private exists = this.$store.getters.list.includes(this.character);
 
-  addToList(character: CharacterModel) {
+  private addToList(character: CharacterModel) {
     this.exists = true;
     this.$store.dispatch("addToList", character);
   }
 
-  removeFromList(character: CharacterModel) {
+  private removeFromList(character: CharacterModel) {
     this.exists = false;
     this.$store.dispatch("removeFromList", character);
   }
