@@ -1,9 +1,10 @@
 <template>
   <div class="card">
     <div class="card-content">
-      <p class="title is-4">{{ character.name }}</p>
-      <div class="level">
-        <div class="level-left">&nbsp;</div>
+      <div class="level is-vcentered">
+        <h1 class="level-left">
+          <strong>{{ character.name }}</strong>
+        </h1>
         <div class="level-right">
           <div class="level-item">
             <button
@@ -11,14 +12,14 @@
               class="level-item button is-success is-small"
               @click="addToList(character)"
             >
-              Add to list
+              Add
             </button>
             <button
               v-else
               class="level-item button is-danger is-small"
               @click="removeFromList(character)"
             >
-              Remove from list
+              Remove
             </button>
           </div>
         </div>
@@ -67,20 +68,16 @@ import Capitilize from "@/mixins/Capitilize";
 export default class Character extends Mixins(Capitilize) {
   @Prop({ required: true }) character!: CharacterModel;
 
-  exists = false;
-
-  mounted() {
-    this.exists = this.$store.getters.list.includes(this.character);
-  }
+  exists = this.$store.getters.list.includes(this.character);
 
   addToList(character: CharacterModel) {
-    this.$store.dispatch("addToList", character);
     this.exists = true;
+    this.$store.dispatch("addToList", character);
   }
 
   removeFromList(character: CharacterModel) {
-    this.$store.dispatch("removeFromList", character);
     this.exists = false;
+    this.$store.dispatch("removeFromList", character);
   }
 }
 </script>

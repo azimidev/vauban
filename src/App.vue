@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <NavBar />
-    <transition name="fade">
-      <router-view />
-    </transition>
+    <router-view />
   </div>
 </template>
 
@@ -18,14 +16,6 @@ export default class App extends Vue {}
 </script>
 
 <style lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
 .mt-10 {
   margin-top: 10px;
 }

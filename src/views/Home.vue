@@ -1,13 +1,13 @@
 <template>
   <section id="home" class="has-background-dark">
-    <div class="container">
+    <div class="container has-text-centered">
       <div
         class="columns is-centered"
         v-for="(set, index) in chunk(characters, 3)"
         :key="index"
       >
         <div class="column is-4" v-for="(character, index) in set" :key="index">
-          <Character :character="character" />
+          <Character :character.sync="character" />
         </div>
       </div>
     </div>
@@ -15,25 +15,17 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Mixins } from "vue-property-decorator";
 import CharacterModel from "@/models/CharacterModel";
 import Character from "@/components/Character.vue";
+import Chunk from "@/mixins/Chunk";
 
 @Component({
   components: { Character }
 })
-export default class Home extends Vue {
+export default class Home extends Mixins(Chunk) {
   private get characters(): Array<CharacterModel> {
-    return this.$store.getters.characters;
-  }
-
-  chunk(array: Array<any>, chunk = 3): Array<any> {
-    const temporary = [];
-    let i, j;
-    for (i = 0, j = array.length; i < j; i += chunk) {
-      temporary.push(array.slice(i, i + chunk));
-    }
-    return temporary;
+    return this.$store.state.characters;
   }
 }
 </script>

@@ -6,7 +6,7 @@
   >
     <div class="navbar-brand is-flex container">
       <router-link class="navbar-item" to="/">Home</router-link>
-      <router-link class="navbar-item" to="/">Your List</router-link>
+      <router-link class="navbar-item" to="/list">Your List</router-link>
     </div>
   </nav>
 </template>
