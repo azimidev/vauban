@@ -6,8 +6,19 @@
         <div class="level-left">&nbsp;</div>
         <div class="level-right">
           <div class="level-item">
-            <button class="level-item button is-primary is-small">
+            <button
+              v-if="!exists"
+              class="level-item button is-success is-small"
+              @click="addToList(character)"
+            >
               Add to list
+            </button>
+            <button
+              v-else
+              class="level-item button is-danger is-small"
+              @click="removeFromList(character)"
+            >
+              Remove from list
             </button>
           </div>
         </div>
@@ -55,6 +66,22 @@ import Capitilize from "@/mixins/Capitilize";
 @Component
 export default class Character extends Mixins(Capitilize) {
   @Prop({ required: true }) character!: CharacterModel;
+
+  exists = false;
+
+  mounted() {
+    this.exists = this.$store.getters.list.includes(this.character);
+  }
+
+  addToList(character: CharacterModel) {
+    this.$store.dispatch("addToList", character);
+    this.exists = true;
+  }
+
+  removeFromList(character: CharacterModel) {
+    this.$store.dispatch("removeFromList", character);
+    this.exists = false;
+  }
 }
 </script>
 
