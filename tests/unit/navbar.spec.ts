@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import NavBar from '@/views/NavBar.vue';
+import NavBar from '@/components/NavBar.vue';
 import { localVue, store, characters } from '../testUtils';
 
 let wrapper: any;
