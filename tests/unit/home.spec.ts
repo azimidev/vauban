@@ -19,7 +19,7 @@ describe("Home.vue", () => {
     expect(wrapper).toBeTruthy();
   });
 
-  test("should display all character", () => {
+  test("should display all character", (): void => {
     for (let i = 0; i <= 9; i++) {
       expect(wrapper.text()).toMatch(characters[i].name);
       expect(wrapper.text()).toMatch(characters[i].height);
