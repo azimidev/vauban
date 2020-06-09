@@ -8,10 +8,7 @@ describe("Home.vue", () => {
   beforeEach(() => {
     wrapper = mount(Home, {
       store,
-      localVue,
-      data() {
-        return {};
-      }
+      localVue
     });
   });
 

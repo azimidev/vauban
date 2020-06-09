@@ -1,6 +1,6 @@
 import { mount } from "@vue/test-utils";
 import NavBar from "@/components/NavBar.vue";
-import { localVue, store, characters, getters } from "../testUtils";
+import { localVue, store } from "../testUtils";
 
 let wrapper: any;
 let listCount = 5;
@@ -8,11 +8,9 @@ let listCount = 5;
 describe("NavBar.vue", () => {
   beforeEach(() => {
     wrapper = mount(NavBar, {
+      stubs: ["router-link"],
       store,
       localVue,
-      data() {
-        return {};
-      },
       computed: {
         listCount() {
           return listCount;

@@ -8,6 +8,7 @@
         <div class="level-right">
           <div class="level-item">
             <button
+              data-test="add"
               v-if="!exists"
               class="level-item button is-success is-small"
               @click="addToList(character)"
@@ -15,6 +16,7 @@
               Add
             </button>
             <button
+              data-test="remove"
               v-else
               class="level-item button is-danger is-small"
               @click="removeFromList(character)"
@@ -81,5 +83,3 @@ export default class Character extends Mixins(Capitalize) {
   }
 }
 </script>
-
-<style lang="scss" scoped></style>
