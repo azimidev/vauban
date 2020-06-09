@@ -2,7 +2,7 @@ import { Vue } from "vue-property-decorator";
 import { Component } from "vue-property-decorator";
 
 @Component
-export default class Capitilize extends Vue {
+export default class Capitalize extends Vue {
   protected capitalize(str: string): string {
     let result = str[0].toUpperCase();
 

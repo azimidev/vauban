@@ -1,7 +1,7 @@
 import { createLocalVue, mount } from "@vue/test-utils";
 import Vuex from "vuex";
 import Home from "@/views/Home.vue";
-// import CharacterModel from "@/models/CharacterModel";
+import CharacterModel from '@/models/CharacterModel';
 
 describe("Home.vue", () => {
   const localVue = createLocalVue();
@@ -9,11 +9,13 @@ describe("Home.vue", () => {
   let wrapper: any;
   let store: any;
   let getters: any;
-  // const characters: Array<CharacterModel> = require("@/data/characters.json");
+  const characters: Array<CharacterModel> = require("@/data/characters.json");
 
   beforeEach(() => {
     getters = {
-      // characters: () => characters
+      characters: () => characters,
+      list: () => Array<CharacterModel>(),
+      listCount: () => 0
     };
     store = new Vuex.Store({
       getters
@@ -29,6 +31,6 @@ describe("Home.vue", () => {
   });
 
   test("should render without error", () => {
-    // TODO
+    expect(true).toBe(true)
   });
 });

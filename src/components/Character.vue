@@ -62,10 +62,10 @@
 <script lang="ts">
 import { Component, Mixins, Prop } from "vue-property-decorator";
 import CharacterModel from "@/models/CharacterModel";
-import Capitilize from "@/mixins/Capitilize";
+import Capitalize from "@/mixins/Capitalize";
 
 @Component
-export default class Character extends Mixins(Capitilize) {
+export default class Character extends Mixins(Capitalize) {
   @Prop({ required: true }) character!: CharacterModel;
 
   private exists = this.$store.getters.list.includes(this.character);
