@@ -33,11 +33,15 @@ export default new Vuex.Store({
 
     [types.SEARCH](state, query) {
       state.characters = characters.filter((character: any) => {
+
+        // TODO: 1st Way - search through any values
         return (
           JSON.stringify(Object.values(character))
             .toLowerCase()
             .indexOf(query) !== -1
         );
+
+        // TODO: 2nd Way - search through name value
         // return character.name.toLowerCase().includes(query);
       });
     }
