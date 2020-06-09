@@ -4,12 +4,6 @@
       <div class="columns is-centered">
         <div class="column is-6">
           <Search class="mt-20" />
-          <!--<input-->
-          <!--  class="input is-rounded"-->
-          <!--  type="search"-->
-          <!--  placeholder="Search"-->
-          <!--  v-model="query"-->
-          <!--/>-->
         </div>
       </div>
 
@@ -37,8 +31,6 @@ import Search from "@/components/Search.vue";
   components: { Search, Character }
 })
 export default class Home extends Mixins(Chunk) {
-  // query = "";
-
   private get characters(): Array<CharacterModel> {
     return this.$store.state.characters;
   }

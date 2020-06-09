@@ -38,6 +38,7 @@ export default new Vuex.Store({
             .toLowerCase()
             .indexOf(query) !== -1
         );
+        // return character.name.toLowerCase().includes(query);
       });
     }
   },
