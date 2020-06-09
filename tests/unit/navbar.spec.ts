@@ -4,7 +4,7 @@ import { localVue, store, characters } from '../testUtils';
 
 let wrapper: any;
 
-describe('Home.vue', () => {
+describe('NavBar.vue', () => {
 	beforeEach(() => {
 		wrapper = mount(NavBar, {
 			store,
