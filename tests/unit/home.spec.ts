@@ -39,101 +39,110 @@ describe('Home.vue', () => {
 	});
 
 	test('should display 1st character', () => {
-		expectTextMatch(characters[0].name);
-		expectTextMatch(characters[0].height);
-		expectTextMatch(characters[0].mass);
-		expectTextMatch(characters[0].hair_color);
-		expectTextMatch(characters[0].skin_color);
-		expectTextMatch(characters[0].eye_color);
-		expectTextMatch(characters[0].birth_year);
-		expectTextMatch(characters[0].gender);
+		const character = characters[0];
+		expectTextMatch(character.name);
+		expectTextMatch(character.height);
+		expectTextMatch(character.mass);
+		expectTextMatch(character.hair_color);
+		expectTextMatch(character.skin_color);
+		expectTextMatch(character.eye_color);
+		expectTextMatch(character.birth_year);
+		expectTextMatch(character.gender);
 	});
 
 	test('should display 2st character', () => {
-		expectTextMatch(characters[1].name);
-		expectTextMatch(characters[1].height);
-		expectTextMatch(characters[1].mass);
-		expectTextMatch(characters[1].hair_color);
-		expectTextMatch(characters[1].skin_color);
-		expectTextMatch(characters[1].eye_color);
-		expectTextMatch(characters[1].birth_year);
-		expectTextMatch(characters[1].gender);
+		const character = characters[1];
+		expectTextMatch(character.name);
+		expectTextMatch(character.height);
+		expectTextMatch(character.mass);
+		expectTextMatch(character.hair_color);
+		expectTextMatch(character.skin_color);
+		expectTextMatch(character.eye_color);
+		expectTextMatch(character.birth_year);
+		expectTextMatch(character.gender);
 	});
 
 	test('should display 3rd character', () => {
-		expectTextMatch(characters[2].name);
-		expectTextMatch(characters[2].height);
-		expectTextMatch(characters[2].mass);
-		expectTextMatch(characters[2].hair_color);
-		expectTextMatch(characters[2].skin_color);
-		expectTextMatch(characters[2].eye_color);
-		expectTextMatch(characters[2].birth_year);
-		expectTextMatch(characters[2].gender);
+		const character = characters[2];
+		expectTextMatch(character.name);
+		expectTextMatch(character.height);
+		expectTextMatch(character.mass);
+		expectTextMatch(character.hair_color);
+		expectTextMatch(character.skin_color);
+		expectTextMatch(character.eye_color);
+		expectTextMatch(character.birth_year);
+		expectTextMatch(character.gender);
 	});
 
 	test('should display 4th character', () => {
-		expectTextMatch(characters[3].name);
-		expectTextMatch(characters[3].height);
-		expectTextMatch(characters[3].mass);
-		expectTextMatch(characters[3].hair_color);
-		expectTextMatch(characters[3].skin_color);
-		expectTextMatch(characters[3].eye_color);
-		expectTextMatch(characters[3].birth_year);
-		expectTextMatch(characters[3].gender);
+		const character = characters[3];
+		expectTextMatch(character.name);
+		expectTextMatch(character.height);
+		expectTextMatch(character.mass);
+		expectTextMatch(character.hair_color);
+		expectTextMatch(character.skin_color);
+		expectTextMatch(character.eye_color);
+		expectTextMatch(character.birth_year);
+		expectTextMatch(character.gender);
 	});
 
 	test('should display 5th character', () => {
-		expectTextMatch(characters[4].name);
-		expectTextMatch(characters[4].height);
-		expectTextMatch(characters[4].mass);
-		expectTextMatch(characters[4].hair_color);
-		expectTextMatch(characters[4].skin_color);
-		expectTextMatch(characters[4].eye_color);
-		expectTextMatch(characters[4].birth_year);
-		expectTextMatch(characters[4].gender);
+		const character = characters[4];
+		expectTextMatch(character.name);
+		expectTextMatch(character.height);
+		expectTextMatch(character.mass);
+		expectTextMatch(character.hair_color);
+		expectTextMatch(character.skin_color);
+		expectTextMatch(character.eye_color);
+		expectTextMatch(character.birth_year);
+		expectTextMatch(character.gender);
 	});
 
 	test('should display 6th character', () => {
-		expectTextMatch(characters[5].name);
-		expectTextMatch(characters[5].height);
-		expectTextMatch(characters[5].mass);
-		expectTextMatch(characters[5].hair_color);
-		expectTextMatch(characters[5].skin_color);
-		expectTextMatch(characters[5].eye_color);
-		expectTextMatch(characters[5].birth_year);
-		expectTextMatch(characters[5].gender);
+		const character = characters[5];
+		expectTextMatch(character.name);
+		expectTextMatch(character.height);
+		expectTextMatch(character.mass);
+		expectTextMatch(character.hair_color);
+		expectTextMatch(character.skin_color);
+		expectTextMatch(character.eye_color);
+		expectTextMatch(character.birth_year);
+		expectTextMatch(character.gender);
 	});
 
 	test('should display 7th character', () => {
-		expectTextMatch(characters[6].name);
-		expectTextMatch(characters[6].height);
-		expectTextMatch(characters[6].mass);
-		expectTextMatch(characters[6].hair_color);
-		expectTextMatch(characters[6].skin_color);
-		expectTextMatch(characters[6].eye_color);
-		expectTextMatch(characters[6].birth_year);
-		expectTextMatch(characters[6].gender);
+		const character = characters[6];
+		expectTextMatch(character.name);
+		expectTextMatch(character.height);
+		expectTextMatch(character.mass);
+		expectTextMatch(character.hair_color);
+		expectTextMatch(character.skin_color);
+		expectTextMatch(character.eye_color);
+		expectTextMatch(character.birth_year);
+		expectTextMatch(character.gender);
 	});
 
 	test('should display 8th character', () => {
-		expectTextMatch(characters[7].name);
-		expectTextMatch(characters[7].height);
-		expectTextMatch(characters[7].mass);
-		expectTextMatch(characters[7].hair_color);
-		expectTextMatch(characters[7].skin_color);
-		expectTextMatch(characters[7].eye_color);
-		expectTextMatch(characters[7].birth_year);
-		expectTextMatch(characters[7].gender);
+		const character = characters[7];
+		expectTextMatch(character.name);
+		expectTextMatch(character.height);
+		expectTextMatch(character.mass);
+		expectTextMatch(character.hair_color);
+		expectTextMatch(character.skin_color);
+		expectTextMatch(character.eye_color);
+		expectTextMatch(character.birth_year);
+		expectTextMatch(character.gender);
 	});
 
 	test('should display 9th character', () => {
-		expectTextMatch(characters[8].name);
-		expectTextMatch(characters[8].height);
-		expectTextMatch(characters[8].mass);
-		expectTextMatch(characters[8].hair_color);
-		expectTextMatch(characters[8].skin_color);
-		expectTextMatch(characters[8].eye_color);
-		expectTextMatch(characters[8].birth_year);
-		expectTextMatch(characters[8].gender);
+		const character = characters[8];
+		expectTextMatch(character.name);
+		expectTextMatch(character.height);
+		expectTextMatch(character.mass);
+		expectTextMatch(character.hair_color);
+		expectTextMatch(character.skin_color);
+		expectTextMatch(character.eye_color);
+		expectTextMatch(character.birth_year);
+		expectTextMatch(character.gender);
 	});
 });
