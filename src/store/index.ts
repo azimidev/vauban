@@ -34,7 +34,7 @@ export default new Vuex.Store({
     [types.SEARCH](state, query) {
       state.characters = characters.filter((character: any) => {
         return (
-          JSON.stringify(character)
+          JSON.stringify(Object.values(character))
             .toLowerCase()
             .indexOf(query) !== -1
         );
