@@ -32,8 +32,12 @@ export default new Vuex.Store({
     },
 
     [types.SEARCH](state, query) {
-      state.characters = characters.filter((character: CharacterModel) => {
-        return character.name.toLowerCase().includes(query);
+      state.characters = characters.filter((character: any) => {
+        return (
+          JSON.stringify(character)
+            .toLowerCase()
+            .indexOf(query) !== -1
+        );
       });
     }
   },
