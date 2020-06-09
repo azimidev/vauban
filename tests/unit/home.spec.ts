@@ -1,26 +1,11 @@
-import { createLocalVue, mount } from '@vue/test-utils';
-import Vuex from 'vuex';
+import { mount } from '@vue/test-utils';
 import Home from '@/views/Home.vue';
-import CharacterModel from '@/models/CharacterModel';
+import { localVue, store, characters } from '../testUtils';
+
+let wrapper: any;
 
 describe('Home.vue', () => {
-	const localVue = createLocalVue();
-	localVue.use(Vuex);
-	let wrapper: any;
-	let store: any;
-	let getters: any;
-	const characters: Array<CharacterModel> = require('@/data/characters.json');
-
 	beforeEach(() => {
-		getters = {
-			characters: () => characters,
-			list: () => Array<CharacterModel>(),
-			listCount: () => 0,
-		};
-		store = new Vuex.Store({
-			getters,
-		});
-
 		wrapper = mount(Home, {
 			store,
 			localVue,
@@ -35,7 +20,7 @@ describe('Home.vue', () => {
 	});
 
 	test('should display all character', () => {
-		for (let i= 0; i <= 9; i++) {
+		for (let i = 0; i <= 9; i++) {
 			expect(wrapper.text()).toMatch(characters[i].name);
 			expect(wrapper.text()).toMatch(characters[i].height);
 			expect(wrapper.text()).toMatch(characters[i].mass);
