@@ -32,7 +32,7 @@ import Search from "@/components/Search.vue";
 })
 export default class Home extends Mixins(Chunk) {
   private get characters(): Array<CharacterModel> {
-    return this.$store.state.characters;
+    return this.$store.getters.characters;
   }
 }
 </script>
