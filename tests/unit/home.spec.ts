@@ -30,119 +30,20 @@ describe('Home.vue', () => {
 		});
 	});
 
-	const expectTextMatch = (exp: string): void => {
-		return expect(wrapper.text()).toMatch(exp)
-	}
-
-	test('should render without error', () => {
+	test('should render without error', (): void => {
 		expect(wrapper).toBeTruthy();
 	});
 
-	test('should display 1st character', () => {
-		const character = characters[0];
-		expectTextMatch(character.name);
-		expectTextMatch(character.height);
-		expectTextMatch(character.mass);
-		expectTextMatch(character.hair_color);
-		expectTextMatch(character.skin_color);
-		expectTextMatch(character.eye_color);
-		expectTextMatch(character.birth_year);
-		expectTextMatch(character.gender);
-	});
-
-	test('should display 2st character', () => {
-		const character = characters[1];
-		expectTextMatch(character.name);
-		expectTextMatch(character.height);
-		expectTextMatch(character.mass);
-		expectTextMatch(character.hair_color);
-		expectTextMatch(character.skin_color);
-		expectTextMatch(character.eye_color);
-		expectTextMatch(character.birth_year);
-		expectTextMatch(character.gender);
-	});
-
-	test('should display 3rd character', () => {
-		const character = characters[2];
-		expectTextMatch(character.name);
-		expectTextMatch(character.height);
-		expectTextMatch(character.mass);
-		expectTextMatch(character.hair_color);
-		expectTextMatch(character.skin_color);
-		expectTextMatch(character.eye_color);
-		expectTextMatch(character.birth_year);
-		expectTextMatch(character.gender);
-	});
-
-	test('should display 4th character', () => {
-		const character = characters[3];
-		expectTextMatch(character.name);
-		expectTextMatch(character.height);
-		expectTextMatch(character.mass);
-		expectTextMatch(character.hair_color);
-		expectTextMatch(character.skin_color);
-		expectTextMatch(character.eye_color);
-		expectTextMatch(character.birth_year);
-		expectTextMatch(character.gender);
-	});
-
-	test('should display 5th character', () => {
-		const character = characters[4];
-		expectTextMatch(character.name);
-		expectTextMatch(character.height);
-		expectTextMatch(character.mass);
-		expectTextMatch(character.hair_color);
-		expectTextMatch(character.skin_color);
-		expectTextMatch(character.eye_color);
-		expectTextMatch(character.birth_year);
-		expectTextMatch(character.gender);
-	});
-
-	test('should display 6th character', () => {
-		const character = characters[5];
-		expectTextMatch(character.name);
-		expectTextMatch(character.height);
-		expectTextMatch(character.mass);
-		expectTextMatch(character.hair_color);
-		expectTextMatch(character.skin_color);
-		expectTextMatch(character.eye_color);
-		expectTextMatch(character.birth_year);
-		expectTextMatch(character.gender);
-	});
-
-	test('should display 7th character', () => {
-		const character = characters[6];
-		expectTextMatch(character.name);
-		expectTextMatch(character.height);
-		expectTextMatch(character.mass);
-		expectTextMatch(character.hair_color);
-		expectTextMatch(character.skin_color);
-		expectTextMatch(character.eye_color);
-		expectTextMatch(character.birth_year);
-		expectTextMatch(character.gender);
-	});
-
-	test('should display 8th character', () => {
-		const character = characters[7];
-		expectTextMatch(character.name);
-		expectTextMatch(character.height);
-		expectTextMatch(character.mass);
-		expectTextMatch(character.hair_color);
-		expectTextMatch(character.skin_color);
-		expectTextMatch(character.eye_color);
-		expectTextMatch(character.birth_year);
-		expectTextMatch(character.gender);
-	});
-
-	test('should display 9th character', () => {
-		const character = characters[8];
-		expectTextMatch(character.name);
-		expectTextMatch(character.height);
-		expectTextMatch(character.mass);
-		expectTextMatch(character.hair_color);
-		expectTextMatch(character.skin_color);
-		expectTextMatch(character.eye_color);
-		expectTextMatch(character.birth_year);
-		expectTextMatch(character.gender);
+	test('should display all character', () => {
+		for (let i= 0; i <= 9; i++) {
+			expect(wrapper.text()).toMatch(characters[i].name);
+			expect(wrapper.text()).toMatch(characters[i].height);
+			expect(wrapper.text()).toMatch(characters[i].mass);
+			expect(wrapper.text()).toMatch(characters[i].hair_color);
+			expect(wrapper.text()).toMatch(characters[i].skin_color);
+			expect(wrapper.text()).toMatch(characters[i].eye_color);
+			expect(wrapper.text()).toMatch(characters[i].birth_year);
+			expect(wrapper.text()).toMatch(characters[i].gender);
+		}
 	});
 });
