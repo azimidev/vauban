@@ -11,7 +11,7 @@ export let getters: any;
 export let actions: any;
 export const characters: Array<CharacterModel> = require("@/data/characters.json");
 
-beforeEach(() => {
+beforeEach((): void => {
   getters = {
     characters: () => characters,
     list: () => Array<CharacterModel>(),

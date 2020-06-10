@@ -5,8 +5,8 @@ import { localVue, store } from "../testUtils";
 let wrapper: any;
 let listCount = 5;
 
-describe("NavBar.vue", () => {
-  beforeEach(() => {
+describe("NavBar.vue", (): void => {
+  beforeEach((): void => {
     wrapper = mount(NavBar, {
       stubs: ["router-link"],
       store,

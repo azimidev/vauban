@@ -4,8 +4,8 @@ import { localVue, store, characters } from "../testUtils";
 
 let wrapper: any;
 
-describe("Home.vue", () => {
-  beforeEach(() => {
+describe("Home.vue", (): void => {
+  beforeEach((): void => {
     wrapper = mount(Home, {
       store,
       localVue
@@ -17,15 +17,23 @@ describe("Home.vue", () => {
   });
 
   test("should display all character", (): void => {
-    for (let i = 0; i <= 9; i++) {
-      expect(wrapper.text()).toMatch(characters[i].name);
-      expect(wrapper.text()).toMatch(characters[i].height);
-      expect(wrapper.text()).toMatch(characters[i].mass);
-      expect(wrapper.text()).toMatch(characters[i].hair_color);
-      expect(wrapper.text()).toMatch(characters[i].skin_color);
-      expect(wrapper.text()).toMatch(characters[i].eye_color);
-      expect(wrapper.text()).toMatch(characters[i].birth_year);
-      expect(wrapper.text()).toMatch(characters[i].gender);
+    const expectHomeToMatchTexts = (...items: any) => {
+      for (items of items) {
+        expect(wrapper.text()).toMatch(items);
+      }
+    };
+
+    for (let i = 0; i < characters.length; i++) {
+      expectHomeToMatchTexts(
+        characters[i].name,
+        characters[i].height,
+        characters[i].mass,
+        characters[i].hair_color,
+        characters[i].skin_color,
+        characters[i].eye_color,
+        characters[i].birth_year,
+        characters[i].gender
+      );
     }
   });
 });

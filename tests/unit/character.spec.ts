@@ -4,8 +4,8 @@ import { actions, characters, localVue, store } from "../testUtils";
 
 let wrapper: any;
 
-describe("NavBar.vue", () => {
-  beforeEach(() => {
+describe("NavBar.vue", (): void => {
+  beforeEach((): void => {
     wrapper = mount(Character, {
       store,
       localVue,
